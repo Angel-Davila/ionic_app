@@ -1,0 +1,35 @@
+
+
+<ion-content>
+  <br>
+  <br>
+  <br>
+  <form>
+
+    <div id="div_label">
+      <ion-label id="login_label" position="fixed">SIGN IN</ion-label> 
+    </div>
+    
+    <div id="div_form">
+      <ion-item id="email_form" lines="full">
+        <ion-label position="floating">Email</ion-label>
+        <ion-input id="email_input" type="text" required></ion-input>
+      </ion-item>
+
+      <ion-item id="password_form" lines="full">
+        <ion-label position="floating">Password</ion-label>
+        <ion-input color="tertiary" type="password" required></ion-input>
+      </ion-item>
+    </div>
+
+    <div id="div_button">
+      <ion-row>
+        <ion-col>
+          <ion-button id="signin_button" [routerLink]="['/home']" type="submit" fill="clear">Sign In</ion-button>
+        </ion-col>
+      </ion-row>
+    </div>
+  </form>
+  
+
+</ion-content>

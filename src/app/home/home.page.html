@@ -1,0 +1,55 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>
+      Main page
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="false">
+   
+  <ion-card>
+    <ion-item>
+      <ion-button (click)="showText()" fill="outline" slot="end">show date</ion-button>
+      <h1>{{text}}</h1>
+    </ion-item>
+  
+    <ion-card-content>
+      This application is a top 5 best cars collection
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-card>
+    <ion-item (click)="carPicked(car1)" class="ion-activated">
+      <ion-icon name="car" slot="start"></ion-icon>
+      <ion-label>{{ car1.name }} {{car1.brand}}</ion-label>
+    </ion-item>
+  
+    <ion-item (click)="carPicked(car2)">
+      <ion-icon name="car" slot="start"></ion-icon>
+      <ion-label>{{ car2.name }} {{car2.brand}}</ion-label>
+    </ion-item>
+  
+    <ion-item (click)="carPicked(car3)" class="ion-activated">
+      <ion-icon name="car" slot="start"></ion-icon>
+      <ion-label>{{ car3.name }} {{car3.brand}}</ion-label>
+    </ion-item>
+  
+    <ion-item (click)="carPicked(car4)">
+      <ion-icon name="car" slot="start"></ion-icon>
+      <ion-label>{{ car4.name }} {{car4.brand}}</ion-label>
+    </ion-item>
+  </ion-card>
+  <ion-card>
+    <ion-card-content *ngIf="hiddenText">
+      Today is today's date. check your calendar if you don't know which is today's date
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-button id="button_reports" [routerLink]="['/report']">
+    show reports
+  </ion-button>
+
+
+
+</ion-content>
